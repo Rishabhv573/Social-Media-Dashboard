@@ -1,1 +1,1 @@
-"use strict"; console.log("HELLO");
+"use strict"; console.log("HELLO WORLD");
