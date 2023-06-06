@@ -1,0 +1,36 @@
+// @media (min-width: 45em){} Something like we write our styles within the curly braces
+// But we are gonna use mixins so that we can reuse our codes and we don't have to write media query everytime
+// And if we ever want to change the em we can simply change it through breakpoints rather than doing everywhere in media
+
+$breakpoints-up: (
+    'medium': '40em',
+    'large': '69.4375em',
+    'xlarge': '87.5em',
+);
+
+$breakpoints-down: (
+    'small': '39.9375em',
+    'medium': '69.3125em',
+    'large': '87.4375em',
+    
+);
+
+@mixin breakpoint($size) { // @mixin will hold code that you wanna use multiple times
+    @media (min-width: map-get($breakpoints-up,$size)){
+        @content;
+    }
+}
+
+@mixin breakpoint-down($size) {
+    @media (max-width: map-get($breakpoints-down,$size)){
+        @content;
+    }
+}
+
+
+// If you wanna use this mixin in your code elsewhere use it like:
+//h1 {
+  //  @include breakpoint(large){
+    //    font-size: 3rem;
+//}
+//}

@@ -1,0 +1,12 @@
+@use '../utils' as *;
+
+.container {   //Containers are used to pad the content inside of them, and there are two container classes available: The .container class provides 
+               //a responsive fixed width container. The .container-fluid class provides a full width container, spanning the entire width of the viewport.
+    padding: 0 rem(25); // 0 for top and bottom and 25px for left and right and this is our default style for mobile
+    max-width: rem(1110);
+    margin: 0 auto rem(46);
+
+    @include breakpoint(large) {
+        padding: 0;
+    }
+}

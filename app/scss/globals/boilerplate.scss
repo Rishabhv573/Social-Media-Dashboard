@@ -1,0 +1,25 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box; // This ensures that if you add padding to an element the total width is gonna include the padding
+}
+
+*, *::before, *::after {    // To inherit the box sizing property
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-inter);
+    background: var(--dark-bg);
+    color: var(--dark-text2);
+}
+
+.visually-hidden {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}

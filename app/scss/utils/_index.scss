@@ -1,0 +1,3 @@
+// Here we are mainly gonna use variables, functions and mixins that aren't actual css rules but rather things that we are gonna in other sass files
+@forward 'breakpoints'; // to include breakpoint 
+@forward 'functions';
